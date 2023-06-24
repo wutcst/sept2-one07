@@ -2,11 +2,6 @@ package Commands;
 
 import Game.AGame;
 
-/**
- * 此类创建一个抽象命令单词来验证命令
- * @author duoduo
- *
- */
 public abstract class ACommandWords 
 {
     public ACommandWords() { }

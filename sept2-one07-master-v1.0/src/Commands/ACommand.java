@@ -1,12 +1,13 @@
+/**
+ * 此类是一个命令类，用于创建一个抽象command命令
+ *
+ * @author zhang chen
+ *
+ */
 package Commands;
 
 import Character.Player;
 
-/**
- * 此类创建一个抽象command命令
- * @author duoduo
- *
- */
 public abstract class ACommand
 {
     private String _commandWord;
