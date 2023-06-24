@@ -1,10 +1,3 @@
-/**
- * 这个类是游戏类，继承自AGame
- *
- * @author Yan han
- *
- */
-
 package Game;
 
 import java.util.ArrayList;
@@ -13,7 +6,6 @@ import java.util.List;
 
 import Character.Player;
 import GUI.GUI;
-
 
 public class Game extends AGame
 {
