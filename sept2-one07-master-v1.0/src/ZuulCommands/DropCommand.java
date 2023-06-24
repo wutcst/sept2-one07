@@ -4,11 +4,6 @@ import Commands.ACommand;
 import Character.Player;
 import Game.AGame;
 
-/**
- * This command class is to the Drop Command
- * @author Stevosh
- *
- */
 public class DropCommand extends ACommand
 {
     

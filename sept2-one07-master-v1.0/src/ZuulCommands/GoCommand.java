@@ -4,11 +4,6 @@ import Commands.ACommand;
 import Game.AGame;
 import Character.Player;
 
-/**
- * This command class is to the go Command
- * @author Stevosh
- *
- */
 public class GoCommand extends ACommand
 {
 	public GoCommand(String firstWord, String secondWord, String thirdWord)

@@ -4,11 +4,6 @@ import Commands.ACommand;
 import Game.AGame;
 import Character.Player;
 
-/**
- * This command class is to the look Command
- * @author Stevosh
- *
- */
 public class LookCommand extends ACommand
 {
     public LookCommand(String firstWord, String secondWord, String thirdWord)

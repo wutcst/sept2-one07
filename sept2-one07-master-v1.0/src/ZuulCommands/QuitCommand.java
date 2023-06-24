@@ -4,11 +4,6 @@ import Game.AGame;
 import Commands.ACommand;
 import Character.Player;
 
-/**
- * This command class is to the quit Command
- * @author Stevosh
- *
- */
 public class QuitCommand extends ACommand
 {
     public QuitCommand(String firstWord, String secondWord, String thirdWord)

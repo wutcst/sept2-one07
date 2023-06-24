@@ -4,11 +4,6 @@ import Character.Player;
 import Commands.ACommand;
 import Game.AGame;
 
-/**
- * This command class is to the give Command
- * @author Stevosh
- *
- */
 public class GiveCommand extends ACommand
 {
 	public GiveCommand(String firstWord, String secondWord, String thirdWord)

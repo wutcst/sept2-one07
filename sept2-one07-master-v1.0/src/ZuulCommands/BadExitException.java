@@ -1,12 +1,12 @@
+/**
+ *
+ * This class is for control the bad exit exception.
+ *
+ */
 package ZuulCommands;
 
 import Game.Room;
 
-/**
- * 
- * this class is for control the bad exit exception
- *
- */
 public class BadExitException extends Exception {
 
     private static final long serialVersionUID = -6960984107626797656L;

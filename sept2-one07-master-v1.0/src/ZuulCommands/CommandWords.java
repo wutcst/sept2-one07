@@ -1,13 +1,12 @@
+/**
+ * This class is an implementation of the Abstract Command words class
+ * to determinate the valid commands
+ *
+ */
 package ZuulCommands;
 
 import Commands.ACommandWords;
 
-/**
- * this class is an implementation of the Abstract Command words class
- * to determinate the valid commands
- * @author Stevosh
- *
- */
 public class CommandWords extends ACommandWords
 {
     // a constant array that holds all valid command words

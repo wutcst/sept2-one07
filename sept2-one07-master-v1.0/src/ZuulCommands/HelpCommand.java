@@ -8,11 +8,6 @@ import Commands.ACommand;
 import Game.AGame;
 import Character.Player;
 
-/**
- * This command class is to the help Command
- * @author Stevosh
- *
- */
 public class HelpCommand extends ACommand
 {  
     public HelpCommand(String firstWord, String secondWord, String thirdWord)
