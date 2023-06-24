@@ -21,38 +21,39 @@ on:
    branches: [ "master" ]
 jobs:
   build:
-#	配置权限
+
+# configure permissions
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-# 下载代码
+# download code
     - uses: actions/checkout@v3
     - name: Set up JDK 11
-# 安装 JDK
+# install JDK
       uses: actions/setup-java@v3
       with:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-# 配置 settings.xml 一般用于 Mavne 私库验证等
+# configure settings.xml
     - name: maven-settings-xml-action
       uses: whelk-io/maven-settings-xml-action@v20
       with:
         repositories: ''
         servers: ''
-# Maven 打包 
+# Maven packaging 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-# 将打包好的 Jar 包 放到 staging 文件夹
+# put the Jar into the staging 
     - run: mkdir staging && cp target/*.jar staging
-# 设置 jobs Maven pom 版本环境变量
+# set version environment variable of jobs Maven pom
     - name: Set Release version env variable
       run: |
         echo "RELEASE_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
     - name: "Build & test"
       run: |
         echo "done!"
-# 上传文件并发布 Release
+# Upload and publish Release
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
