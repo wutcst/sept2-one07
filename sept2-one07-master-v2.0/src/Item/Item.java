@@ -1,8 +1,8 @@
 package Item;
 
 /**
- * 
- * @author duoduo
+ * 这是一个物品类，用于抽象一个物品
+ * @author zhangchen
  *
  */
 public class Item implements IItem

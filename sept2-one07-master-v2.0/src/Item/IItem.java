@@ -2,7 +2,7 @@ package Item;
 
 /**
  * This class is an interface to make a plan for the Item class
- * @author Stevosh
+ * @author zhangchen
  *
  */
 public interface IItem
