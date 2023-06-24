@@ -1,3 +1,10 @@
+/**
+ * 这个类用来生成房间
+ *
+ * @author Yan han
+ *
+ */
+
 package Game;
 
 import java.util.HashMap;
@@ -5,12 +12,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import Game.AGame;
 import Item.Item;
 import Character.Player;
 import ZuulCommands.BadExitException;
 
-public class Room
+public class   Room
 {
 	// 房间描述（名称）
     final public String _description;
@@ -66,10 +72,10 @@ public class Room
         return this._description;
     }
 
-    public void addItem(String name, int weight)
+    public void addItem(String name, int weight, String cn_name)
     {
-    	Item item = new Item(name, weight);
-   		this._itemsPresent.put(name, item);
+    	Item item = new Item(name, weight, cn_name);
+   		this._itemsPresent.put(cn_name, item);
     }
     
     public void addItem(String name, Item item)

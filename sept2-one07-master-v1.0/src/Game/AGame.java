@@ -1,3 +1,10 @@
+/**
+ * 此类创建一个抽象类，用来生成游戏
+ *
+ * @author Yan han
+ *
+ */
+
 package Game;
 
 import java.util.ResourceBundle;
@@ -11,17 +18,12 @@ import Character.Player;
 import GUI.GUI;
 import ZuulInputOutput.*;
 
-/**
- * 此类创建一个抽象游戏来加载其他游戏
- *
- * @author duoduo
- *
- */
 public abstract class AGame
 {
 	public static final Out _out = new Out();
 	public static final In _in = new In();
 	public static ResourceBundle _messages;
+	public static String _cn_name;
 	public static ACommandWords _commands;
 	final private Parser _parser;
 	protected Player _player;
@@ -36,6 +38,7 @@ public abstract class AGame
 	{
 
 		AGame._messages = ResourceBundle.getBundle("ZuulCommands.MessagesBundle");
+		AGame._cn_name= "zc";
 		AGame._commands = commands;
 		this._parser = new Parser("ZuulCommands");
 		createRooms();

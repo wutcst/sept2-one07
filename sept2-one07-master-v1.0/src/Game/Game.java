@@ -1,3 +1,10 @@
+/**
+ * 这个类是游戏类，继承自AGame
+ *
+ * @author Yan han
+ *
+ */
+
 package Game;
 
 import java.util.ArrayList;
@@ -7,11 +14,7 @@ import java.util.List;
 import Character.Player;
 import GUI.GUI;
 
-/**
- * 这个类是游戏类扩展到AGame
- * @author duoduo
- *
- */
+
 public class Game extends AGame
 {
     public Game()
@@ -56,38 +59,38 @@ public class Game extends AGame
        
         // 房间链接关系以及物品表
         outside.setExits(garden, theatre, lab, pub);
-        outside.addItem(Game._messages.getString("notebook"), 2);
+        outside.addItem(Game._messages.getString("notebook"), 2, "探险笔记");
         theatre.setExits(TProom, cafe, null, outside);
-        theatre.addItem(Game._messages.getString("rock"), 2);
+        theatre.addItem(Game._messages.getString("battery"), 2,"电池");
         pub.setExits(null, outside, restaurant, null);
-        pub.addItem(Game._messages.getString("beer"), 2);
+        pub.addItem(Game._messages.getString("beer"), 2,"啤酒");
         lab.setExits(outside, office, store, restaurant);
-        lab.addItem(Game._messages.getString("laptop"), 5);
+        lab.addItem(Game._messages.getString("drug"), 5,"药剂");
         office.setExits(null, null, null, lab);
-        office.addItem(Game._messages.getString("pen"), 1);
+        office.addItem(Game._messages.getString("pen"), 1,"笔");
         
         cafe.setExits(null, null, null, theatre);
-        cafe.addItem(Game._messages.getString("cafe"), 1);
-        cafe.addItem(Game._messages.getString("tea"), 1);
+        cafe.addItem(Game._messages.getString("cafe"), 1,"咖啡");
+        cafe.addItem(Game._messages.getString("tea"), 1,"茶");
         garden.setExits(null, null, outside, null);
-        garden.addItem(Game._messages.getString("stick"), 2);
-        garden.addItem(Game._messages.getString("rabbit"), 1);
+        garden.addItem(Game._messages.getString("stick"), 2,"木棍");
+        garden.addItem(Game._messages.getString("flower"), 1,"花");
         store.setExits(lab, null, null, toilet);
-        store.addItem(Game._messages.getString("candy"), 1);
+        store.addItem(Game._messages.getString("candy"), 1,"糖果");
         restaurant.setExits(pub, lab, toilet, null);
-        restaurant.addItem(Game._messages.getString("food"), 2);
+        restaurant.addItem(Game._messages.getString("rice"), 2,"米饭");
         toilet.setExits(restaurant, store, null, null);
-        toilet.addItem(Game._messages.getString("paper"), 1);
+        toilet.addItem(Game._messages.getString("paper"), 1,"纸巾");
         TProom.setExits(pub,office,store,cafe);
 
-        lab.addCharacter(new Player(Game._messages.getString("Gandalf"), lab));
-        pub.addCharacter(new Player(Game._messages.getString("Aragorn"), pub));
-        toilet.addCharacter(new Player(Game._messages.getString("Legolas"), toilet));
-        garden.addCharacter(new Player(Game._messages.getString("Gimly"), garden));
-        cafe.addCharacter(new Player(Game._messages.getString("Frodo"), cafe));
-        cafe.addCharacter(new Player(Game._messages.getString("Sam"), cafe));
+        lab.addCharacter(new Player(Game._messages.getString("Gandalf"), lab, "甲"));
+        pub.addCharacter(new Player(Game._messages.getString("Aragorn"), pub, "乙"));
+        toilet.addCharacter(new Player(Game._messages.getString("Legolas"), toilet, "丙"));
+        garden.addCharacter(new Player(Game._messages.getString("Gimly"), garden, "丁"));
+        cafe.addCharacter(new Player(Game._messages.getString("Frodo"), cafe, "戊"));
+        cafe.addCharacter(new Player(Game._messages.getString("Sam"), cafe, "戌"));
         setRooms(this._rooms);
-        this._player = new Player(Game._messages.getString("me"), outside);
+        this._player = new Player(Game._messages.getString("me"), outside, "幂");
         setPlayer(this._player);
     }
     
