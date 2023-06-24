@@ -1,12 +1,12 @@
+/**
+ * 该类用于处理输入
+ *
+ * @author Dian Tu
+ */
 package ZuulInputOutput;
 
 import java.util.List;
 
-/**
- * A really simple class to hanndle output
- *
- * @author rej
- */
 public class Out {
 
     public Out() { }
