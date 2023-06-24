@@ -1,10 +1,3 @@
-/**
- * 这个类用来生成房间
- *
- * @author Yan han
- *
- */
-
 package Game;
 
 import java.util.HashMap;
