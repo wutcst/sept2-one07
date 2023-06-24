@@ -4,11 +4,11 @@
  */
 package ZuulCommands;
 
-import Commands.absCommand;
+import Commands.ACommand;
 import Game.absGame;
 import Character.Player;
 
-public class Help extends absCommand
+public class Help extends ACommand
 {  
     public Help(String firstWord, String secondWord, String thirdWord)
     {

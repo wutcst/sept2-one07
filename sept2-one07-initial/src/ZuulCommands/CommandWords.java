@@ -1,8 +1,8 @@
 package ZuulCommands;
 
-import Commands.absCommandWords;
+import Commands.ACommandWords;
 
-public class CommandWords extends absCommandWords
+public class CommandWords extends ACommandWords
 {
     // a constant array that holds all valid command words
     private static final String[] validCommands = 

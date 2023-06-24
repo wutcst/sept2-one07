@@ -1,10 +1,10 @@
 package ZuulCommands;
 
-import Commands.absCommand;
+import Commands.ACommand;
 import Character.Player;
 import Game.absGame;
 
-public class UnknownCommand extends absCommand
+public class UnknownCommand extends ACommand
 {
     public UnknownCommand(String firstWord, String secondWord, String thirdWord)
     {

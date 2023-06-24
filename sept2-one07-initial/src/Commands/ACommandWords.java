@@ -10,9 +10,9 @@ package Commands;
 
 import Game.absGame;
 
-public abstract class absCommandWords
+public abstract class ACommandWords
 {
-    public absCommandWords() { }
+    public ACommandWords() { }
 
     public abstract String[] getValidCommands();
     

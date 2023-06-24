@@ -1,10 +1,10 @@
 package ZuulCommands;
 
-import Commands.absCommand;
+import Commands.ACommand;
 import Game.absGame;
 import Character.Player;
 
-public class Look extends absCommand
+public class Look extends ACommand
 {
     public Look(String firstWord, String secondWord, String thirdWord)
     {

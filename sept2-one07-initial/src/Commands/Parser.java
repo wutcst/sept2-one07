@@ -15,7 +15,7 @@ import ZuulCommands.*;
 
 public class Parser 
 {
-    private final absCommandWords _commands;  // 保存所有有效的命令词
+    private final ACommandWords _commands;  // 保存所有有效的命令词
     private final Scanner _reader;         // 命令输入源
     private final String _MYPACKAGE; //包含特定于游戏的类的包的名称
 
@@ -29,7 +29,7 @@ public class Parser
     /**
      * @return 下一个命令关键词
      */
-    public absCommand getCommand()
+    public ACommand getCommand()
     {
         String inputLine;   // 将保存完整的输入行
         String word1 = null;
@@ -67,7 +67,7 @@ public class Parser
         	String cmdString = this._MYPACKAGE + word1.substring(0, 1).toUpperCase() + word1.substring(1) + "Command";
             try
             {
-                absCommand cmd = (absCommand) Class.forName(cmdString).newInstance();
+                ACommand cmd = (ACommand) Class.forName(cmdString).newInstance();
                 cmd.addWords(word1, word2, word3);
                 //Could use the Constructor class but this is easier
                 return cmd;
@@ -88,7 +88,7 @@ public class Parser
         }
     }
     
-    public absCommand getCommandGUI(String str)
+    public ACommand getCommandGUI(String str)
     {
         String inputLine;   // will hold the full input line
         String word1 = null;
@@ -124,7 +124,7 @@ public class Parser
             String cmdString = this._MYPACKAGE + word1.substring(0, 1).toUpperCase() + word1.substring(1) + "Command";
             try
             {
-                absCommand cmd = (absCommand) Class.forName(cmdString).newInstance();
+                ACommand cmd = (ACommand) Class.forName(cmdString).newInstance();
                 cmd.addWords(word1, word2, word3);
                 //Could use the Constructor class but this is easier
                 return cmd;

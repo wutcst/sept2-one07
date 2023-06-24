@@ -15,8 +15,8 @@ package Game;
 import java.util.ResourceBundle;
 import java.util.List;
 
-import Commands.absCommand;
-import Commands.absCommandWords;
+import Commands.ACommand;
+import Commands.ACommandWords;
 import Commands.Parser;
 import Character.Player;
 import ZuulInputOutput.*;
@@ -26,7 +26,7 @@ public abstract class absGame
 	public static final Out _out = new Out();
 	public static final In _in = new In();
 	public static ResourceBundle _messages;
-	public static absCommandWords _commands;
+	public static ACommandWords _commands;
 	final private Parser _parser;
 	protected Player _player;
 	protected List<Room> _rooms;
@@ -36,7 +36,7 @@ public abstract class absGame
 
 	 * @param commands
 	 */
-	public absGame(absCommandWords commands)
+	public absGame(ACommandWords commands)
 	{
 
 		absGame._messages = ResourceBundle.getBundle("ZuulCommands.MessagesBundle");
@@ -55,7 +55,7 @@ public abstract class absGame
 		printWelcome();
 		while (!finished)
 		{
-			absCommand command = this._parser.getCommand();
+			ACommand command = this._parser.getCommand();
 			finished = processCommand(command);
 		}
 		absGame._out.println(absGame._messages.getString("goodbye"));
@@ -74,7 +74,7 @@ public abstract class absGame
 	 * @param command
 	 * @return
 	 */
-	private boolean processCommand(absCommand command)
+	private boolean processCommand(ACommand command)
 	{
 		return command.execute(this._player);
 	}

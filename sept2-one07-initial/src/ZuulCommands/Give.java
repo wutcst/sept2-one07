@@ -1,10 +1,10 @@
 package ZuulCommands;
 
 import Character.Player;
-import Commands.absCommand;
+import Commands.ACommand;
 import Game.absGame;
 
-public class Give extends absCommand
+public class Give extends ACommand
 {
 	public Give(String firstWord, String secondWord, String thirdWord)
 	{

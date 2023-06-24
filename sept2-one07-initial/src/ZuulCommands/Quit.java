@@ -1,10 +1,10 @@
 package ZuulCommands;
 
 import Game.absGame;
-import Commands.absCommand;
+import Commands.ACommand;
 import Character.Player;
 
-public class Quit extends absCommand
+public class Quit extends ACommand
 {
     public Quit(String firstWord, String secondWord, String thirdWord)
     {

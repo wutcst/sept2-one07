@@ -10,20 +10,20 @@ package Commands;
 
 import Character.Player;
 
-public abstract class absCommand
+public abstract class ACommand
 {
     private String _commandWord;
     private String _secondWord;
     private String _thirdWord;
 
-    public absCommand(String firstWord, String secondWord, String thirdWord)
+    public ACommand(String firstWord, String secondWord, String thirdWord)
     {
         this._commandWord = firstWord;
         this._secondWord = secondWord;
         this._thirdWord = thirdWord;
     }
     
-    public absCommand() {}
+    public ACommand() {}
     
     /**
      * 添加命令中的关键词

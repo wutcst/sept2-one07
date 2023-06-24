@@ -1,9 +1,9 @@
 package ZuulCommands;
 
-import Commands.absCommand;
+import Commands.ACommand;
 import Character.Player;
 
-public class Back extends absCommand {
+public class Back extends ACommand {
     public Back(String firstWord, String secondWord, String thirdWord)
     {
         super(firstWord, secondWord, thirdWord);
