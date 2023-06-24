@@ -5,7 +5,7 @@
 package ZuulCommands;
 
 import Commands.ACommand;
-import Game.absGame;
+import Game.AGame;
 import Character.Player;
 
 public class Help extends ACommand
@@ -24,18 +24,18 @@ public class Help extends ACommand
     public boolean execute(Player player)
     {
     	for (String str : getInstructions()) 
-    	    absGame._out.println(str);
+    	    AGame._out.println(str);
         return false;
     }
     
     private String[] getInstructions()
     {
         String[] rv = new String[4];
-        rv[0] = absGame._messages.getString("lost");
+        rv[0] = AGame._messages.getString("lost");
         rv[1] = "";
-        rv[2] = absGame._messages.getString("commands");
+        rv[2] = AGame._messages.getString("commands");
         String tmp = "   ";
-        for (String cmd : absGame._commands.getValidCommands())
+        for (String cmd : AGame._commands.getValidCommands())
             tmp += cmd + ' ';
         rv[3] = tmp;
         return rv;

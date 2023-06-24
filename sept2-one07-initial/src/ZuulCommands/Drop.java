@@ -2,7 +2,7 @@ package ZuulCommands;
 
 import Commands.ACommand;
 import Character.Player;
-import Game.absGame;
+import Game.AGame;
 
 public class Drop extends ACommand
 {
@@ -23,7 +23,7 @@ public class Drop extends ACommand
         if (!hasSecondWord())
         {
             // if there is no second word, we don't know what to drop...
-            absGame._out.println(absGame._messages.getString("dropWhat"));
+            AGame._out.println(AGame._messages.getString("dropWhat"));
             return false;
         }
         String desc = getSecondWord();

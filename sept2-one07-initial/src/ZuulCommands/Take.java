@@ -1,6 +1,6 @@
 package ZuulCommands;
 
-import Game.absGame;
+import Game.AGame;
 import Commands.ACommand;
 import Character.Player;
 
@@ -22,7 +22,7 @@ public class Take extends ACommand
         if (!hasSecondWord())
         {
             // if there is no second word, we don't know what to take...
-            absGame._out.println(absGame._messages.getString("takeWhat"));
+            AGame._out.println(AGame._messages.getString("takeWhat"));
             return false;
         }
         String desc = getSecondWord();

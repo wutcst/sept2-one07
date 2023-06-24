@@ -9,7 +9,7 @@ package Character;
 
 import Item.Item;
 import Game.Room;
-import Game.absGame;
+import Game.AGame;
 
 import java.util.HashMap;
 import java.util.List;
@@ -145,13 +145,13 @@ public class Player implements Character
     {
         if (!getCurrentRoom().containsItem(desc))
         {
-            absGame._out.println(desc + " " + absGame._messages.getString("room"));
+            AGame._out.println(desc + " " + AGame._messages.getString("room"));
             return;
         }
         Item item = getCurrentRoom().getItem(desc);
         if (tooHeavy(item))
         {
-            absGame._out.println(desc + " " + absGame._messages.getString("heavy"));
+            AGame._out.println(desc + " " + AGame._messages.getString("heavy"));
             return;
         }
         item = getCurrentRoom().removeItem(desc);
@@ -168,7 +168,7 @@ public class Player implements Character
 	{
 		if (!hasItem(name))
 		{
-			absGame._out.println(absGame._messages.getString("dontHave") + " " + name);
+			AGame._out.println(AGame._messages.getString("dontHave") + " " + name);
             return;
 		}
         Item item = this._itemsInventory.remove(name);
@@ -185,17 +185,17 @@ public class Player implements Character
 	{
         if (!this._currentRoom.hasCharacter(character))
         {
-            absGame._out.println(character + " " + absGame._messages.getString("room"));
+            AGame._out.println(character + " " + AGame._messages.getString("room"));
             return;
         }
         if (!this._itemsInventory.containsKey(desc))
         {
-            absGame._out.println(absGame._messages.getString("room") + " " + desc);
+            AGame._out.println(AGame._messages.getString("room") + " " + desc);
             return;
         }
         if (this._currentRoom.getCharacter(character).getTotalWeight() + this._itemsInventory.get(desc).getWeight() > this._currentRoom.getCharacter(character).getMaxWeight())
         {
-        	absGame._out.println(character + " " + absGame._messages.getString("heavy") + " " + desc);
+        	AGame._out.println(character + " " + AGame._messages.getString("heavy") + " " + desc);
             return;
         }
         Item item = this._itemsInventory.remove(desc);
@@ -208,7 +208,7 @@ public class Player implements Character
 	public void look()
 	{
 		for (String str : getCurrentRoom().getDetails())
-			absGame._out.println(str);
+			AGame._out.println(str);
 	}
 	public void back(){
 		String newdirection = null;
@@ -236,7 +236,7 @@ public class Player implements Character
 
         if (nextRoom == null)
         {
-            absGame._out.println(absGame._messages.getString("door"));
+            AGame._out.println(AGame._messages.getString("door"));
         }
         else{
             setCurrentRoom(nextRoom);

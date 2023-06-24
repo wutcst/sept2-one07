@@ -32,10 +32,10 @@ public class Room
     {
         try
         {
-    	    setExit(absGame._messages.getString("north"), north);
-    	    setExit(absGame._messages.getString("east"), east);
-    	    setExit(absGame._messages.getString("south"), south);
-    	    setExit(absGame._messages.getString("west"), west);
+    	    setExit(AGame._messages.getString("north"), north);
+    	    setExit(AGame._messages.getString("east"), east);
+    	    setExit(AGame._messages.getString("south"), south);
+    	    setExit(AGame._messages.getString("west"), west);
     	}
         catch (BadExitException e)
         {
@@ -100,7 +100,7 @@ public class Room
     		return this._itemsPresent.remove(description);
     	else
     	{
-    		absGame._out.println(description + " " + absGame._messages.getString("room"));
+    		AGame._out.println(description + " " + AGame._messages.getString("room"));
     		return null;
     	}
     }
@@ -140,20 +140,20 @@ public class Room
     {   	
     	List<String> details = new LinkedList<>();
     	
-    	details.add(absGame._messages.getString("in") + " " + getDescription());
-        String tmp = absGame._messages.getString("exits") + ": ";
+    	details.add(AGame._messages.getString("in") + " " + getDescription());
+        String tmp = AGame._messages.getString("exits") + ": ";
         tmp = this._exits.keySet().stream()
                 .map((dir) -> dir + ' ')
                 .reduce(tmp, String::concat);
         details.add(tmp);
         
-        tmp = absGame._messages.getString("items") + ": ";
+        tmp = AGame._messages.getString("items") + ": ";
         tmp = this._itemsPresent.keySet().stream()
                 .map((desc) -> desc + '(' + this._itemsPresent.get(desc).getWeight() + ')')
                 .reduce(tmp, String::concat);
         details.add(tmp);
         
-        tmp = absGame._messages.getString("characters") + ": ";
+        tmp = AGame._messages.getString("characters") + ": ";
         tmp = this._characters.keySet().stream()
         		.map((desc) -> desc + ' ')
         		.reduce(tmp, String::concat);    

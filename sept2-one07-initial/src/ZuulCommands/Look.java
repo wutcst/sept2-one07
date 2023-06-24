@@ -1,7 +1,7 @@
 package ZuulCommands;
 
 import Commands.ACommand;
-import Game.absGame;
+import Game.AGame;
 import Character.Player;
 
 public class Look extends ACommand
@@ -21,7 +21,7 @@ public class Look extends ACommand
     {
         if (hasSecondWord())
         {
-            absGame._out.println(absGame._messages.getString("lookWhat"));
+            AGame._out.println(AGame._messages.getString("lookWhat"));
             return false;
         }
         player.look();

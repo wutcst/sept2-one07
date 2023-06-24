@@ -2,7 +2,7 @@ package ZuulCommands;
 
 import Commands.ACommand;
 import Character.Player;
-import Game.absGame;
+import Game.AGame;
 
 public class UnknownCommand extends ACommand
 {
@@ -19,7 +19,7 @@ public class UnknownCommand extends ACommand
     @Override
     public boolean execute(Player player)
     {
-        absGame._out.println(absGame._messages.getString("unknown"));
+        AGame._out.println(AGame._messages.getString("unknown"));
         return false;
     }
 }

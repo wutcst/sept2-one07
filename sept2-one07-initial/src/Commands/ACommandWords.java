@@ -8,7 +8,7 @@
  */
 package Commands;
 
-import Game.absGame;
+import Game.AGame;
 
 public abstract class ACommandWords
 {
@@ -21,7 +21,7 @@ public abstract class ACommandWords
     {
         for(String cmd : getValidCommands())
         {
-            if (cmd.equals(absGame._messages.getString(aString)))
+            if (cmd.equals(AGame._messages.getString(aString)))
                 return true;
         }
         return false;

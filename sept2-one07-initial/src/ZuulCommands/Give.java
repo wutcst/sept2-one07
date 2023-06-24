@@ -2,7 +2,7 @@ package ZuulCommands;
 
 import Character.Player;
 import Commands.ACommand;
-import Game.absGame;
+import Game.AGame;
 
 public class Give extends ACommand
 {
@@ -21,12 +21,12 @@ public class Give extends ACommand
     {
         if (!hasSecondWord())
         {
-            absGame._out.println(absGame._messages.getString("giveWhat"));
+            AGame._out.println(AGame._messages.getString("giveWhat"));
             return false;
         }
         if (!hasThirdWord())
         {
-        	absGame._out.println(absGame._messages.getString("giveWho"));
+        	AGame._out.println(AGame._messages.getString("giveWho"));
             return false;
         }
         String desc = getSecondWord();

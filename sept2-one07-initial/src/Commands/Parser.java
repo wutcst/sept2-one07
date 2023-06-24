@@ -10,7 +10,7 @@ package Commands;
 import java.util.MissingResourceException;
 import java.util.Scanner;
 
-import Game.absGame;
+import Game.AGame;
 import ZuulCommands.*;
 
 public class Parser 
@@ -21,8 +21,8 @@ public class Parser
 
     public Parser(String pkg)
     {
-        this._commands = absGame._commands;
-        this._reader = new Scanner(absGame._in.in);
+        this._commands = AGame._commands;
+        this._reader = new Scanner(AGame._in.in);
         this._MYPACKAGE = pkg + '.';
     }
 
@@ -36,7 +36,7 @@ public class Parser
         String word2 = null;
         String word3 = null;
 
-        absGame._out.print("> ");     // 打印提示
+        AGame._out.print("> ");     // 打印提示
 
         inputLine = this._reader.nextLine();
         //在线上最多查找两个单词
@@ -56,7 +56,7 @@ public class Parser
         // 有了它。如果没有，创建一个“null”命令。
         try
         {
-            word1 = absGame._messages.getString(word1); // translate it
+            word1 = AGame._messages.getString(word1); // translate it
         }
         catch (MissingResourceException | NullPointerException e)
         {
@@ -113,7 +113,7 @@ public class Parser
         // 有了它。如果没有，创建一个“null”命令。
         try
         {
-            word1 = absGame._messages.getString(word1); // translate it
+            word1 = AGame._messages.getString(word1); // translate it
         }
         catch (MissingResourceException | NullPointerException e)
         {

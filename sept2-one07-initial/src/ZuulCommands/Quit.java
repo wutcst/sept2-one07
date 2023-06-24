@@ -1,6 +1,6 @@
 package ZuulCommands;
 
-import Game.absGame;
+import Game.AGame;
 import Commands.ACommand;
 import Character.Player;
 
@@ -21,7 +21,7 @@ public class Quit extends ACommand
     {       
         if (hasSecondWord())
         {
-            absGame._out.println(absGame._messages.getString("quitWhat"));
+            AGame._out.println(AGame._messages.getString("quitWhat"));
             return false;
         }
         return true;

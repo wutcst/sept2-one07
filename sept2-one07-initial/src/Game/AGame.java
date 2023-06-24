@@ -21,7 +21,7 @@ import Commands.Parser;
 import Character.Player;
 import ZuulInputOutput.*;
 
-public abstract class absGame
+public abstract class AGame
 {
 	public static final Out _out = new Out();
 	public static final In _in = new In();
@@ -36,11 +36,11 @@ public abstract class absGame
 
 	 * @param commands
 	 */
-	public absGame(ACommandWords commands)
+	public AGame(ACommandWords commands)
 	{
 
-		absGame._messages = ResourceBundle.getBundle("ZuulCommands.MessagesBundle");
-		absGame._commands = commands;
+		AGame._messages = ResourceBundle.getBundle("ZuulCommands.MessagesBundle");
+		AGame._commands = commands;
 		this._parser = new Parser("ZuulCommands");
 		createRooms();
 	}
@@ -58,7 +58,7 @@ public abstract class absGame
 			ACommand command = this._parser.getCommand();
 			finished = processCommand(command);
 		}
-		absGame._out.println(absGame._messages.getString("goodbye"));
+		AGame._out.println(AGame._messages.getString("goodbye"));
 	}
 	
 	/**
@@ -66,7 +66,7 @@ public abstract class absGame
 	 */
 	private void printWelcome()
 	{
-		getWelcomeStrings().stream().forEach((str) -> { absGame._out.println(str); });
+		getWelcomeStrings().stream().forEach((str) -> { AGame._out.println(str); });
 	}
 	
 	/**

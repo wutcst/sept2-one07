@@ -1,7 +1,7 @@
 package ZuulCommands;
 
 import Commands.ACommand;
-import Game.absGame;
+import Game.AGame;
 import Character.Player;
 
 public class Go extends ACommand
@@ -21,7 +21,7 @@ public class Go extends ACommand
     {
         if (!hasSecondWord())
         {
-            absGame._out.println(absGame._messages.getString("goWhere"));
+            AGame._out.println(AGame._messages.getString("goWhere"));
             return false;
         }
         String direction = getSecondWord();

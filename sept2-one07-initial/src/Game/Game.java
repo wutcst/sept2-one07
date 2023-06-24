@@ -6,7 +6,7 @@ import java.util.List;
 
 import Character.Player;
 
-public class Game extends absGame
+public class Game extends AGame
 {
     public Game()
     {
