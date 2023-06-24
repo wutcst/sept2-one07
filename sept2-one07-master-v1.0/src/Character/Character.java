@@ -1,10 +1,3 @@
-/**
- * 这是一个接口，生成玩家，敌人等角色 ...
- *
- * @author Yan han
- *
- */
-
 package Character;
 
 import Game.Room;
@@ -13,6 +6,16 @@ import Item.Item;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * This class is part of the "World of Zuul" application. 
+ * "World of Zuul" is a very simple, text based adventure game.  
+ * 
+ *
+ * 生成玩家，敌人等角色 ...
+ * 
+ * @author duoduo
+ *
+ */
 public interface Character
 {
 	

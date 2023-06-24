@@ -1,15 +1,10 @@
 /**
  * This class is part of the "World of Zuul" application.
- * "World of Zuul" is a very simple, text based adventure game.
  *
- * 玩家就是角色。它继承自字符接口。
  * Player类.
- * 我们有一个名字，一个当前房间和物品.
  *
- * @author Yan han
  *
  */
-
 package Character;
 
 import Item.Item;
@@ -26,6 +21,7 @@ public class Player implements Character
 	private String _name;  // name of the player
 	private Room _currentRoom; // current room where the player is
 	private String _lastdirection;
+	private String _cn_name;
 	private int _totalWeight; // weight total of items can wear
 	private static int _MAX_WEIGHT = 10;
 	private HashMap<String, Item> _itemsInventory;
@@ -35,9 +31,10 @@ public class Player implements Character
 	 * @param name
 	 * @param startRoom
 	 */
-	public Player(String name, Room startRoom)
+	public Player(String name, Room startRoom, String cn_name)
 	{
 		this._name = name;
+		this._cn_name = cn_name;
 		this._currentRoom = startRoom;
 		this._totalWeight = 0;
 		this._itemsInventory = new HashMap<>();
@@ -58,7 +55,7 @@ public class Player implements Character
 	@Override
 	public String getName()
 	{
-		return this._name;
+		return this._cn_name;
 	}
 	
 	/**
