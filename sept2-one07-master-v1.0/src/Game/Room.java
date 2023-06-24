@@ -1,3 +1,10 @@
+/**
+ * 这个类用来创建房间
+ *
+ * @author Yanhan
+ *
+ */
+
 package Game;
 
 import java.util.HashMap;

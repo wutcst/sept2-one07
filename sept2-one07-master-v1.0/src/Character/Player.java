@@ -1,3 +1,12 @@
+/**
+ * 玩家类就是角色。它继承自字符接口。
+ * Player类.
+ * 我们有一个名字，一个当前房间和物品.
+ *
+ * @author Yanhan
+ *
+ */
+
 package Character;
 
 import Item.Item;
@@ -9,17 +18,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
-/**
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
- * 
- * 玩家就是角色。它继承自字符接口。
- * Player类.
- * 我们有一个名字，一个当前房间和物品.
- * 
- * @author duoduo
- *
- */
 public class Player implements Character
 {
 	private String _name;  // name of the player

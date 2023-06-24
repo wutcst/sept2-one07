@@ -1,3 +1,11 @@
+/**
+ * 此类是一个抽象类,用来加载游戏
+ *
+ *
+ * @author Yanhan
+ *
+ */
+
 package Game;
 
 import java.util.ResourceBundle;
@@ -8,15 +16,9 @@ import Commands.ACommand;
 import Commands.ACommandWords;
 import Commands.Parser;
 import Character.Player;
-import GUI.GUI;
 import ZuulInputOutput.*;
 
-/**
- * 此类创建一个抽象游戏来加载其他游戏
- *
- * @author duoduo
- *
- */
+
 public abstract class AGame
 {
 	public static final Out _out = new Out();
@@ -47,7 +49,6 @@ public abstract class AGame
 	public void play()
 	{
 		boolean finished = false;
-		GUI gui = new GUI(this._player, this._parser);
 		
 		printWelcome();
 		while (!finished)
