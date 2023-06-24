@@ -1,3 +1,9 @@
+/**
+ * This class is part of the "World of Zuul" application.
+ *
+ * Parser类.
+ *
+ */
 package Commands;
 
 import java.util.MissingResourceException;
@@ -5,15 +11,7 @@ import java.util.Scanner;
 
 import Game.AGame;
 import ZuulCommands.*;
-/**
- * This class is part of the "World of Zuul" application.
- * "World of Zuul" is a very simple, text based adventure game.
- *
- * Parser类.
- *
- * @author duoduo
- *
- */
+
 public class Parser 
 {
     private final ACommandWords _commands;  // 保存所有有效的命令词
